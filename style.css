@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr;
+    height: 100%;
+}
+
+.img {
+    width: 36px;
+    height: 36px;
+}
+
+.side-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto) 1fr;
+    gap: 15px;
+    color: white;
+    background-color: blue;
+}
+
+.side-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.right-container {
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+}
+
+.header {
+    background-color: white;
+    display: grid;
+
+}
+
+.upper-header, .down-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.search {
+    width: 100%;
+    height: 25px;
+    border-radius: 40px;
+    background-color: lightgray;
+    border: none;
+}
+
+.bottom-container {
+    background-color: grey;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.controls {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: end;
+    gap: 25px;
+}
+
+button {
+    padding: 10px 20px;
+    width: 90px;
+    color: white;
+    font-weight: bold;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    background-color: blue;
+}
+
+ul {
+    list-style: none;
+}
+
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 350px));
+    gap: 15px;
+}
+
+.project-card {
+    padding: 20px;
+    height: 150px;
+    border-radius: 5px;
+    border-left: 5px solid orange;
+    background-color: white;
+    display: grid;
+    gap: 10px;
+}
+
+.actions {
+    display: flex;
+    justify-self: end;
+}
+
+.main-side {
+    display: grid;
+}
+
+.announcements-container, .trending-container {
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.announcement-item {
+    border-bottom: 1px solid grey;
+    padding: 10px;
+}
