@@ -31,7 +31,6 @@ body {
     gap: 35px;
     color: white;
     background-color: var(--primary-color);
-    padding: 20px;
 }
 
 .side-item {
@@ -40,11 +39,16 @@ body {
     font-weight: bold;
     padding: 5px;
     align-items: center;
+    padding: 5px 20px;
 }
 
-.side-item:hover {
+.side-container .side-item:hover:not(div.side-item) {
     background-color: #86efac;
     cursor: pointer;
+}
+
+button:hover {
+    background-color: #86efac;
 }
 
 .right-container {
@@ -65,12 +69,13 @@ img {
 .header {
     background-color: white;
     display: grid;
-    padding: 35px;
+    padding: 10px 25px;
 }
 
 .upper-header, .down-header {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
 }
 
 .search-container {
@@ -94,6 +99,36 @@ img {
 
 .profile > * {
     padding: 5px;
+    font-weight: bold;
+}
+
+.greeting {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+}
+
+.big {
+    width: 56px;
+    height: 56px;
+}
+
+.upper-header img:not(.avatar) {
+    width: 32px;
+    height: 32px;
+}
+
+.greeting-user {
     font-weight: bold;
 }
 
@@ -129,13 +164,13 @@ ul {
 
 .project-cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, minmax(350px, 1fr));
     gap: 15px;
 }
 
 .project-card {
     padding: 20px;
-    height: 150px;
+    height: 200px;
     border-radius: 5px;
     border-left: 5px solid orange;
     background-color: white;
@@ -146,16 +181,32 @@ ul {
 .actions {
     display: flex;
     justify-self: end;
+    justify-items: flex-end;
+    align-items: flex-end;
 }
 
 .main-side {
     display: grid;
 }
 
+.header, 
+.project-card,
+.announcements-container,
+.trending-container {
+    z-index: 1;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
 .announcements-container, .trending-container {
     background-color: white;
     border-radius: 5px;
-    padding: 10px;
+    padding: 25px;
+}
+
+.trending-item {
+    display: flex;
+    margin: 15px;
+    align-items: center;
 }
 
 h2 {
@@ -163,6 +214,29 @@ h2 {
 }
 
 .announcement-item {
-    border-bottom: 1px solid grey;
-    padding: 10px;
+    padding: 20px 10px;
 }
+
+.announcement-item:not(:last-child) {
+    border-bottom: 1px solid grey;
+}
+
+.content p {
+    font-weight: 500;
+    color: grey;
+}
+
+.announcement-item p, .trend {
+    font-weight: 400;
+    color: grey;
+}
+
+.trend {
+    font-size: 14px;
+}
+
+.user {
+    font-weight: 500;
+    font-size: 14px;
+}
+
